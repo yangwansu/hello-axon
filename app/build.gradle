@@ -21,8 +21,13 @@ repositories {
 dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     implementation 'org.axonframework:axon-spring-boot-starter:4.2.1'
+
+
+
+    runtimeOnly 'com.h2database:h2:1.4.200'
 
 
     compileOnly 'org.projectlombok:lombok:1.18.18'
@@ -39,6 +44,11 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
+}
+
+tasks.named("compileJava" ) {
+    sourceCompatibility("1.8")
+    targetCompatibility("1.8")
 }
 
 

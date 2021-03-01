@@ -24,11 +24,10 @@ dependencies {
 
     implementation 'org.axonframework:axon-spring-boot-starter:4.2.1'
 
-
     compileOnly 'org.projectlombok:lombok:1.18.18'
     annotationProcessor 'org.projectlombok:lombok:1.18.18'
 
-    testCompileOnly 'org.projectlombok:lombok:1.18.18'
+
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.18'
 
     // Use JUnit Jupiter API for testing.
@@ -41,6 +40,11 @@ dependencies {
     implementation 'com.google.guava:guava:29.0-jre'
 }
 
+
+tasks.withType(JavaCompile) {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
 
 tasks.named('test') {
     // Use junit platform for unit tests.

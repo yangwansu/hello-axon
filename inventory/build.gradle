@@ -24,6 +24,9 @@ dependencies {
 
     implementation 'org.axonframework:axon-spring-boot-starter:4.2.1'
 
+    //implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //runtimeOnly 'com.h2database:h2:1.4.200'
+
     compileOnly 'org.projectlombok:lombok:1.18.18'
     annotationProcessor 'org.projectlombok:lombok:1.18.18'
 

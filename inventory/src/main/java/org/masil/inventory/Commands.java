@@ -3,7 +3,6 @@ package org.masil.inventory;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
-import org.axonframework.spring.stereotype.Aggregate;
 
 import java.util.UUID;
 
@@ -24,7 +23,6 @@ public class Commands {
     }
 
     @Getter
-    @Aggregate
     @AllArgsConstructor
     public static class DecreaseInventoryCommand {
         @TargetAggregateIdentifier
